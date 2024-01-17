@@ -1,0 +1,16 @@
+[pack]
+	buildbitmaps = false
+[core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+	bare = false
+[remote "원본"]
+	url = https://github.com/Soojong94/soojong_DB.git
+	pushurl = https://github.com/Soojong94/soojong_DB.git
+	fetch = +refs/heads/main:refs/remotes/원본/main
+	push = +refs/heads/main:refs/remotes/원본/main
+[branch "main"]
+	remote = 원본
+	merge = refs/heads/main
