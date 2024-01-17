@@ -28,5 +28,29 @@ GRANT SELECT, UPDATE
      SELECT  *
      FROM TEST;
      
-     
-     
+-- 스키마
+-- 각 계정마다 존재하고, 이름이 계정과 같음
+-- 오라클에서는 계정과 스키마를 구분하지 않고 사용
+
+SELECT *
+ FROM DCLTEST.TEST;
+ 
+ --원래 대로라면  스키마.테이블.컬럼 형태로 작성해야하지만
+ --자동으로 접속한 계정의 스키마로 접근 가능해서 그동안 생략했던 거임
+ 
+ SELECT *
+   FROM HR.EMPLOYEES;
+
+--HR 계정에서 객체 권한 주기
+
+-- GRANT SELECT, UPDATE
+--    ON HR.EMPLOYEES
+--     TO DCLTEST;
+
+--------------------------------------------------
+
+UPDATE HR.EMPLOYEES
+      SET FIRST_NAME = '수룡'
+ WHERE EMPLOYEE_ID = 207;
+ 
+ 
