@@ -218,6 +218,7 @@ COMMIT;
 UPDATE 테이블
    SET 변경할컬럼 = 변경할데이터
  WHERE 행의 조건 ; 
+
  
 SELECT *
   FROM 직원;
