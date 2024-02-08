@@ -1,7 +1,7 @@
-create table member 
+CREATE TABLE MEMBER_TB 
 (
-ID varchar2(50) primary key ,
-PW varchar2(20) not null
+ID VARCHAR2(50) PRIMARY KEY ,
+PW VARCHAR2(20) NOT NULL
 )
 ;
 
@@ -13,42 +13,34 @@ commit;
 SELECT *
 FROM 상대개발자;
 
-create table Character
+CREATE TABLE CHARACTER_TB
 (
 
-NickName varchar(50) ,
-Health number(3) not null,
-Intelligence number(3) not null,
-FaithPower number(3) not null,
-MagicPower number(3) not null,
-Mentality number(3) not null,
-Salary number(3)
+NAME VARCHAR2(6) PRIMARY KEY ,
+HP NUMBER(10) NOT NULL,
+INTELL NUMBER(10) NOT NULL,
+FP NUMBER(10) NOT NULL,
+MP NUMBER(10) NOT NULL,
+MT NUMBER(10) NOT NULL,
+SALARY NUMBER(10) NOT NULL
 
 )
 ;
 
 
 
-create table 상대개발자
-(
-Nick varchar(50) primary key ,
-체력 number(3) not null,
-지능 number(3) not null,
-신앙력 number(3) not null,
-마력 number(3) not null,
-정신력 number(3) not null,
-연봉 number(20) not null
-)
-;
 
 
 INSERT INTO 상대개발자
 values
 ( 'SBS' , 40, 20, 20,25,25,'10000');
 
+SELECT NICKNAME, SALARY
+ FROM character 
+ORDER BY salary DESC;
 
+DELETE FROM CHARACTER 
+WHERE NickName = '0000';
 
-
-
-drop table Character;
+drop table CHARACTER_TB;
 commit;
